@@ -1,0 +1,201 @@
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+\graphicspath{{../figures/}}
+
+% Only for the classic theme, if you want to change the width of your name
+% placeholder (to leave more space for your address details
+\AtBeginDocument{\setlength{\maketitlenamewidth}{8cm}}
+
+% Required when changes are made to page layout lengths
+%\AtBeginDocument{\recomputelengths}
+
+
+% For the 'classic' style, if you want to force the width allocated to your name
+% and avoid line breaks. be careful though, the length is normally calculated to
+% avoid any overlap with your personal info; use this at your own typographical
+% risks...
+%\setlength{\makecvtitlenamewidth}{5cm}
+
+% If you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{3cm}
+
+%------------------------------------------------------------------------------
+%            personal data
+%------------------------------------------------------------------------------
+\name{Christof\\}{Angermueller}
+\title{M.Sc. in Bioinformatics}
+\address{Storey's Way}{CB3 0DZ Cambridge}{United Kingdom}
+\phone[mobile]{+44\,7546\,818\,879}
+\email{cangermueller@gmail.com}
+\photo[80pt]{./passport.jpg}
+\homepage{www.cangermueller.com}
+\social[linkedin]{cangermueller}
+\social[twitter]{cangermueller}
+\social[github]{cangermueller}
+%\nopagenumbers{}
+
+
+%------------------------------------------------------------------------------
+%            content
+%------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Personal Details}
+\cvitem{Date \& place of birth}{February~13, 1988, Coburg}
+\cvitem{Nationality}{Germany}
+\cvitem{Marital status}{unmarried}
+
+\section{Education}
+\cventry {10/2013\,--\,present}
+         {Ph.D. in Bioinformatics}
+         {European Bioinformatics Institute (EBI/EMBL)}
+         {University of Cambridge}
+         {Supervisors: Oliver Stegle (1st), Zoubin Ghahramani (2nd)}
+         {Research: ``Machine learning for the analysis of high-dimensional
+           biological data.''}
+\cventry {10/2011\,--\,10/2013}
+         {Studies for M.Sc. Bioinformatics}
+         {Ludwig Maximilians University}
+         {Munich}
+         {\hfill\break M.Sc. with grade 1.1 (A)}
+         {Thesis: ``Machine learning for predicting type 1 diabetes with
+           high-throughput data.''}
+\cventry {10/2008\,--\,09/2011}
+         {Studies for B.Sc. Bioinformatics}
+         {Ludwig Maximilians University}
+         {Munich}
+         {\hfill\break B.Sc. with grade 1.3 (A-)}
+         {Thesis: ``Sequence searching using context-specific pseudocounts
+           predicted by conditional random fields.''}
+\cventry {08/1999\,--\,07/2008}
+         {Grammar school}
+         {Gymnasium Ernestinum}
+         {Coburg}
+         {\hfill\break Abitur with grade 1.7~(B+)}
+         {Thesis: ``Complexity of Sorting Algorithms.``, Best thesis award in
+           mathematics.}
+
+\section {Research Experiences}
+\cventry {06/2014}
+         {Machine learning summer school}
+         {Renmin University of China}
+         {Beijing, China}
+         {}
+         {Lectures on current machine learning algorithms, specifically deep
+           artificial neural networks.}
+\cventry {10/2013}
+         {Ph.D. core course}
+         {European Molecular Biology Laboratory (EMBL)}
+         {Heidelberg, Germany}
+         {}
+         {Three months predoctoral core course in molecular biology.}
+\cventry {07/2012\,--\,10/2012}
+         {Internship}
+         {University of Washington, Molecular Engineering and Sciences, D.~Baker}
+         {Seattle, USA}
+         {}
+         {Training neural networks to select templates for structure prediction.}
+\cventry {09/2011}
+         {Summer school}
+         {Technical University Munich}
+         {Sarntal, Austria}
+         {}
+         {Course: ``Simulation Technology for Health and Environment''}
+\cventry {07/2009\,--\,10/2013}
+         {Scientific Assistant}
+         {Ludwig Maximilians University, Computational Biology, J.~Soeding}
+         {Munich}
+         {}
+         {Development of computational models for biological data: {}%
+            \begin{itemize}%
+              \item CS-BLAST: Conditional random fields for predicting mutation
+                probabilities for sequence searching. \hfill\break
+                {\small\url{http://toolkit.lmb.uni-muenchen.de/cs\_blast}}
+              \item HHfuncs: A web server for predicting functional sites in
+                proteins, which was successfully evaluated in two (CASP9 \&
+                CASP10) prediction contests.
+              \item A framework to predict protein structures from X-ray
+                crystallography and SAXS curves.
+              \item The Bioinformatics Toolkit: A web server for biological data
+                analysis.\hfill\break{\small\url{http://toolkit.lmb.uni-muenchen.de}}
+            \end{itemize}
+         }
+\cventry {01/2009\,--\,08/2009}
+         {Scientific Assistant}
+         {Technical University Munich, Chair of Computer Science II}
+         {Munich}
+         {}
+         {Developing and maintaining a remote teaching platform.
+           \hfill\break{\small\url{http://ttt.in.tum.de}}}
+
+
+\section{Additional Qualifications}
+\cvitem {Languages}
+        {German (native), English (professional proficiency), French (advanced)}
+\cvitem {Programming}
+        {Python, R, C/C\textsuperscript{++}, Java, Perl (all expert level)}
+\cvitem {Web-development}
+        {HTML, XML, PHP, JavaScript, Rails (all good knowledge)}
+
+\section{Publications}
+\cventry {2014}
+         {\textbf{Single-cell genome-wide bisulfite sequencing for assessing epigenetic heterogeneity}}
+         {}
+         {\hfill\break S. Smallwood, H. Lee, \underline{C. Angermueller}, F. Krueger, H. Saadeh, J. Peat, S. Andrews, O. Stegle, W. Reik, G. Kelsey}
+         {\hfill\break \textit{Nature Methods}}
+         {}
+\cventry {2014}
+         {\textbf{Feature Ranking of Type 1 Diabetes Susceptibility Genes Improves Risk Prediction of Type 1 Diabetes}}
+         {}
+         {\hfill\break C. Winkler, J. Krumsiek, F. Buettner, \underline{C. Angermueller}, E. Giannopoulou, F. Theis, A. Ziegler, E. Bonifacio}
+         {\hfill\break \textit{Diabetes}}
+         {}
+\cventry {2013}
+         {\textbf{Cloud Prediction of Protein Structure and Function with PredictProtein for Debian}}
+         {}
+         {\hfill\break L. Kaján, G. Yachdav, E. Vicedo, M. Steinegger, M. Mirdita, \underline{C. Angermueller}, A. Boehm, S. Domke, J. Ertl, C. Mertes, E. Reisinger, C. Staniewski, B. Rost}
+         {\hfill\break \textit{BioMed Research International}}
+         {}
+\cventry {2012}
+         {\textbf{Discriminative modeling of context-specific amino acid substitution probabilities}}
+         {}
+         {\hfill\break \underline{C. Angermueller}, A. Biegert, J. Soeding}
+         {\hfill\break \textit{Bioinformatics}}
+         {}
+\cventry {2011}
+         {\textbf{The Mre11:Rad50 Structure Shows an ATP-Dependent Molecular Clamp in DNA Double-Strand Break Repair}}
+         {}
+         {\hfill\break K. Lammens, D.J. Bemeleit, C. Moeckel, E. Clausing, A. Schele, S. Hartung, C. B. Schiller, M. Lucas, \underline{C. Angermueller}, J. Soeding, K. Straesser, K.-P. Hopfner}
+         {\hfill\break\textit{Cell}}
+         {}
+
+\section{References}
+\hspace*{\hintscolumnwidth}%
+\hspace*{-0.8cm}%
+\begin{minipage}[t]{.5\linewidth}
+Oliver~Stegle\\
+Statistical Genomics\\
+European Bioinformatics Institute\\
+\emailsymbol\ stegle@ebi.ac.uk\\
+\phonesymbol\ +44\,1223\,494\,101\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+Dr.\ Johannes~Soeding\\
+Protein Bioinformatics\\
+Gene Center LMU Munich\\
+\emailsymbol\ soeding@genzentrum.lmu.de\\
+\phonesymbol\ +49\,89\,2180\,76742\\
+\end{minipage}
+\hfill
+
+\vspace{3cm}
+\parbox{5cm}{\today\\[2ex]
+\hspace*{2mm}\includegraphics[width=3.25cm]{signature_bw.jpg}}
+
+
+\end{document}
