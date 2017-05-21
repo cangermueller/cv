@@ -1,5 +1,6 @@
 \documentclass[11pt,a4paper]{moderncv}
 \moderncvstyle{classic}
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.75]{geometry}
@@ -7,7 +8,7 @@
 
 % Only for the classic theme, if you want to change the width of your name
 % placeholder (to leave more space for your address details
-\AtBeginDocument{\setlength{\maketitlenamewidth}{8cm}}
+% \AtBeginDocument{\setlength{\maketitlenamewidth}{8cm}}
 
 % Required when changes are made to page layout lengths
 %\AtBeginDocument{\recomputelengths}
@@ -22,16 +23,19 @@
 % If you want to change the width of the column with the dates
 \setlength{\hintscolumnwidth}{3cm}
 
+% Hyperlinks
+\newcommand\chref[3][magenta]{\href{#2}{\small\color{#1}#3}}
+
 %------------------------------------------------------------------------------
 %            personal data
 %------------------------------------------------------------------------------
 \name{Christof\\}{Angermueller}
-\title{M.Sc. in Bioinformatics}
-\address{Storey's Way}{CB3 0DZ Cambridge}{United Kingdom}
+\title{Ph.D. Bioinformatics}
+\address{Gleismuthhausen 21}{96145 Sesslach}{Germany}
 \phone[mobile]{+44\,7546\,818\,879}
 \email{cangermueller@gmail.com}
-\photo[80pt]{./passport.jpg}
-\homepage{www.cangermueller.com}
+\photo[80pt]{passport.jpg}
+\homepage{cangermueller.com}
 \social[linkedin]{cangermueller}
 \social[twitter]{cangermueller}
 \social[github]{cangermueller}
@@ -44,134 +48,300 @@
 \begin{document}
 \maketitle
 
-\section{Personal Details}
-\cvitem{Date \& place of birth}{February~13, 1988, Coburg}
-\cvitem{Nationality}{Germany}
-\cvitem{Marital status}{unmarried}
+\section{Interests}
+\cvitem{}{Machine learning, Software development, Bioinformatics}
 
 \section{Education}
-\cventry {10/2013\,--\,present}
+\cventry {2013-10\,--\,2017-04}
          {Ph.D. in Bioinformatics}
-         {European Bioinformatics Institute (EBI/EMBL)}
-         {University of Cambridge}
-         {Supervisors: Oliver Stegle (1st), Zoubin Ghahramani (2nd)}
-         {Research: ``Machine learning for the analysis of high-dimensional
-           biological data.''}
-\cventry {10/2011\,--\,10/2013}
+         {\hfill\break University of Cambridge, European Bioinformatics Institute (EBI/EMBL)}
+         {Cambridge, UK}
+         {}
+         {Supervisors: Oliver Stegle (1st), Zoubin Ghahramani (2nd)
+           \hfill\break \chref{https://cangermueller.com/wp-content/papercite-data/pdf/angermueller_christof_deep_2017.pdf}{Thesis}: \textit{Deep neural networks and statistical models for studying single-cell DNA methylation.}}
+\cventry {2011-10\,--\,2013-10}
          {Studies for M.Sc. Bioinformatics}
-         {Ludwig Maximilians University}
-         {Munich}
+         {\hfill\break Ludwig Maximilians University}
+         {Munich, Germany}
          {\hfill\break M.Sc. with grade 1.1 (A)}
-         {Thesis: ``Machine learning for predicting type 1 diabetes with
-           high-throughput data.''}
-\cventry {10/2008\,--\,09/2011}
+         {\chref{https://cangermueller.com/wp-content/papercite-data/pdf/angermuller_machine_2013.pdf}{Thesis}: \textit{Machine learning for predicting type 1 diabetes with high-throughput data.}}
+\cventry {2008-10\,--\,2011-09}
          {Studies for B.Sc. Bioinformatics}
-         {Ludwig Maximilians University}
-         {Munich}
+         {\hfill\break Ludwig Maximilians University}
+         {Munich, Germany}
          {\hfill\break B.Sc. with grade 1.3 (A-)}
-         {Thesis: ``Sequence searching using context-specific pseudocounts
-           predicted by conditional random fields.''}
-\cventry {08/1999\,--\,07/2008}
+         {\chref{https://cangermueller.com/wp-content/papercite-data/pdf/angermuller_sequence_2011.pdf}{Thesis}: \textit{Sequence searching using context-specific pseudocounts predicted by conditional random fields.}}
+\cventry {1999-08\,--\,2008-07}
          {Grammar school}
          {Gymnasium Ernestinum}
-         {Coburg}
+         {Coburg, Germany}
          {\hfill\break Abitur with grade 1.7~(B+)}
-         {Thesis: ``Complexity of Sorting Algorithms.``, Best thesis award in
-           mathematics.}
+         {Thesis: \textit{Complexity of sorting algorithms.} Best thesis award in mathematics.}
 
-\section {Research Experiences}
-\cventry {06/2014}
-         {Machine learning summer school}
-         {Renmin University of China}
-         {Beijing, China}
+\clearpage
+\newpage
+
+\section{Experience}
+\subsection{Vocational}
+\cventry {2017-06\,--\,}
+         {Software Engineer}
+         {\hfill\break Google}
+         {Mountain View, California, United States}
          {}
-         {Lectures on current machine learning algorithms, specifically deep
-           artificial neural networks.}
-\cventry {10/2013}
-         {Ph.D. core course}
-         {European Molecular Biology Laboratory (EMBL)}
-         {Heidelberg, Germany}
+         {Development of deep neural networks for medical image analysis.}
+
+\subsection{Software development}
+\cventry {2016-09\,--\,2014-12}
+         {DeepCpG}
          {}
-         {Three months predoctoral core course in molecular biology.}
-\cventry {07/2012\,--\,10/2012}
-         {Internship}
-         {University of Washington, Molecular Engineering and Sciences, D.~Baker}
-         {Seattle, USA}
          {}
-         {Training neural networks to select templates for structure prediction.}
-\cventry {09/2011}
-         {Summer school}
-         {Technical University Munich}
-         {Sarntal, Austria}
+         {\hfill\break Author of DeepCpG, a Python package for predicting the methylation state of CpG dinucleotides in multiple cells using deep neural networks}
+         {\chref{https://github.com/cangermueller/deepcpg}{Source code},
+          \chref{https://pypi.python.org/pypi/deepcpg}{Python package},
+          \chref{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1189-z}{Publication}}
+\cventry {2016-05\,--\,2016-08}
+         {Google Software Engineering Internship}
+         {\hfill\break Mountain View, USA}
          {}
-         {Course: ``Simulation Technology for Health and Environment''}
-\cventry {07/2009\,--\,10/2013}
-         {Scientific Assistant}
-         {Ludwig Maximilians University, Computational Biology, J.~Soeding}
-         {Munich}
+         {\hfill\break Project: \textit{Explainable deep neural networks for
+           medial images.}
+           \hfill\break Hosts: Arun Narayanaswamy (GAS team), Dale Webster (Medical Imaging team)}
+         {\begin{itemize}
+             \item Developed three attention methods based on gradient
+               backpropagation, spatial transformer units, and soft-attention,
+               which consistently identified known and new markers for predicting
+               eye diseases.
+             \item Submitted developed methods to Google codebase.
+             \item Improved state-of-the art performance in predicting eye diseases via extensive hyperparameter optimization.
+          \end{itemize}}
+\cventry {2015-04\,--\,2015-12}
+         {Theano contributor}
+         {\hfill\break Python Software Foundation}
          {}
-         {Development of computational models for biological data: {}%
-            \begin{itemize}%
-              \item CS-BLAST: Conditional random fields for predicting mutation
-                probabilities for sequence searching. \hfill\break
-                {\small\url{http://toolkit.lmb.uni-muenchen.de/cs\_blast}}
-              \item HHfuncs: A web server for predicting functional sites in
-                proteins, which was successfully evaluated in two (CASP9 \&
-                CASP10) prediction contests.
-              \item A framework to predict protein structures from X-ray
-                crystallography and SAXS curves.
-              \item The Bioinformatics Toolkit: A web server for biological data
-                analysis.\hfill\break{\small\url{http://toolkit.lmb.uni-muenchen.de}}
-            \end{itemize}
+         {\hfill\break Regularly contributed to the deep learning library
+           Theano. Author and maintainer of d3viz, a module for interactively
+           visualizing computational graphs}
+         {\chref{http://deeplearning.net/software/theano/library/d3viz/index.html}{User guide},
+          \chref{https://github.com/Theano/Theano/tree/master/theano/d3viz}{Source code}
          }
-\cventry {01/2009\,--\,08/2009}
+\cventry {2015-05--2015-08}
+         {Google Summer of Code Student}
+         {\hfill\break Google, Python Software Foundation}
+         {}
+         {\hfill\break Project: \textit{Theano--Interactive visualization of Computational Graphs.}
+          \hfill\break Developed d3viz, a module for interactively visualizing computational graphs. Project successfully passed mid-term and end-term evaluation and has been integrated into Theano's main development branch}
+         {\chref{https://cangermueller.com/blog/}{Blog posts},
+          \chref{http://www.google-melange.com/gsoc/homepage/google/gsoc2015}{GSoC 2015}}
+\cventry {2015-01\,--\,2015-12}
+         {Scikit-learn contributor}
+         {\hfill\break Python Software Foundation}
+         {}
+         {\hfill\break Regularly contributed to the machine learning library Scikit-learn. Revised class interfaces, fixed bugs, and improved documentation}
+         {\chref{https://github.com/scikit-learn/scikit-learn}{scikit-learn}}
+\cventry {2014-07--2014-12}
+         {VBMFA}
+         {}
+         {}
+         {\hfill\break Author of VBMFA, a python package for variational factor analysis, dimensionality reduction, and clustering. The package is regularly used (\textasciitilde50 downloads per week) for analyzing high-dimensional biological data}
+         {\chref{https://github.com/cangermueller/vbmfa}{Source code},
+          \chref{http://pythonhosted.org/vbmfa/}{Python package}}
+\cventry {2011-06--2012-09}
+         {CS-BLAST}
+         {}
+         {}
+         {\hfill\break Co-author of CS-BLAST, a widely used (\textasciitilde75 requests per day) protein sequence searching tool written in C++. Developed a conditional random field model that increased search sensitivity by 17\%}
+         {\chref{https://github.com/cangermueller/csblast}{Source code},
+          \chref{http://bioinformatics.oxfordjournals.org/content/28/24/3240.short}{Publication}}
+\cventry {2009-03\,--\,2011-06}
+         {Bioinformatics Toolkit}
+         {}
+         {}
+         {\hfill\break Maintainer of the Bioinformatics Toolkit, a popular (\textasciitilde200 requests per day) web server written in Ruby and Rails for bioinformatics research. Improved visualization, fixed bugs, and addressed user requests}
+         {\chref{http://toolkit.tuebingen.mpg.de}{Bioinformatics Toolkit}}
+
+\subsection{Miscellaneous}
+\cventry {2015-08}
+         {Deep Learning Summer School}
+         {\hfill\break University of Montreal}
+         {Montreal, Canada}
+         {\hfill\break Courses on state-of-the art deep learning methods for computer vision, speech recognition, and natural language processing}
+         {\chref{https://sites.google.com/site/deeplearningsummerschool/home}{Website}}
+\cventry {2015-07}
+         {Machine Learning Summer School}
+         {\hfill\break Max Planck Institute for Intelligent Systems}
+         {Tuebingen, Germany}
+         {\hfill\break Courses on fundamentals and state-of-the art machine learning methods by leading experts in the field}
+         {\chref{http://mlss.tuebingen.mpg.de/2015/}{Website}}
+\cventry {2014-06}
+         {Machine Learning Summer School}
+         {\hfill\break Renmin University of China}
+         {Beijing, China}
+         {\hfill\break Courses on fundamentals and state-of-the art machine learning methods by leading experts in the field, specifically deep neural networks}
+         {\chref{http://lamda.nju.edu.cn/conf/mlss2014/}{Website}}
+\cventry {2012-07\,--\,2012-10}
+         {Research Internship}
+         {\hfill\break University of Washington, Molecular Engineering and Sciences, D.~Baker}
+         {Seattle, USA}
+         {\hfill\break Improved protein structure prediction by using neural networks for scoring related proteins}
+         {}
+\cventry {2011-09}
+         {Summer School}
+         {\hfill\break Technical University Munich}
+         {Sarntal, Austria}
+         {\hfill\break Course: \textit{Simulation Technology for Health and Environment}}
+         {}
+\cventry {2009-07\,--\,2013-10}
+         {Scientific Assistant}
+         {\hfill\break Ludwig Maximilians University, Computational Biology, J.~Soeding}
+         {Munich, Germany}
+         {\hfill\break Developed model to study protein structures using SAXS data, which was published in \textit{Cell}. Developed model to predict protein binding sites, which was scored amongst the 10 best methods in the international CASP9 and CASP10 protein structure prediction contest}
+         {}
+\cventry {2009-01\,--\,2009-08}
          {Scientific Assistant}
          {Technical University Munich, Chair of Computer Science II}
          {Munich}
+         {\hfill\break Maintained and extended the TeleTeachingTool written in Java for broadcasting video lectures}
+         {\chref{http://ttt.in.tum.de/}{TeleTeachingTool}}
+
+\section{Professional Activities}
+\cventry {2015-09\,--\,2016-06}
+         {Conference Organizer}
+         {\hfill\break Quantitative Genomics 2016}
+         {London (UK)}
+         {\hfill\break PhD student conference on quantitative methods in biology.\hfill\break Tasks: Website, speaker invitations, topic selection}
+         {\chref{http://quantitative-genomics.com/}{Conference website}}
+\cventry {2015-08\,--\,2016-06}
+         {Conference Organizer}
+         {Pandemic! The global threat of deadly diseases}
+         {Cambridge (UK)}
+         {\hfill\break Scientific conference targeted at people with non-academic background.
+          \hfill\break Tasks: topic selection, speaker selection, advertisement}
+         {\chref{http://www.ebi.ac.uk/about/events/science-and-society-2015}{Conference website}}
+\cventry {2014-10\,--\,2015-11}
+         {Computing Officer}
+         {\hfill\break Trinity Hall college}
+         {Cambridge (UK)}
+         {\hfill\break Tasks: maintaining website, managing mailing lists, answering user requests}
          {}
-         {Developing and maintaining a remote teaching platform.
-           \hfill\break{\small\url{http://ttt.in.tum.de}}}
-
-
-\section{Additional Qualifications}
-\cvitem {Languages}
-        {German (native), English (professional proficiency), French (advanced)}
-\cvitem {Programming}
-        {Python, R, C/C\textsuperscript{++}, Java, Perl (all expert level)}
-\cvitem {Web-development}
-        {HTML, XML, PHP, JavaScript, Rails (all good knowledge)}
+\cventry {2014-06\,--\,2015-06}
+         {Conference Organizer}
+         {Life and Society}
+         {Cambridge (UK)}
+         {\hfill\break Scientific conference targeted at people with non-academic background.
+          \hfill\break Tasks: topic selection, speaker selection, advertisement}
+         {}
 
 \section{Publications}
-\cventry {2014}
-         {\textbf{Single-cell genome-wide bisulfite sequencing for assessing epigenetic heterogeneity}}
+\cventry {2017-04-11}
+         {\textbf{DeepCpG: accurate prediction of single-cell DNA methylation states using deep learning}}
          {}
-         {\hfill\break S. Smallwood, H. Lee, \underline{C. Angermueller}, F. Krueger, H. Saadeh, J. Peat, S. Andrews, O. Stegle, W. Reik, G. Kelsey}
+         {\hfill\break \underline{C. Angermueller}, H. Lee, W. Reik, O. Stegle}
+         {\hfill\break \textit{Genome Biology}}
+         {\chref{2017-04-11}{Link}}
+\cventry {2016-07-01}
+         {\textbf{Deep learning for computational biology}}
+         {Review article}
+         {\hfill\break \underline{C. Angermueller}, T. P\"arnamaa, L. Parts, O. Stegle}
+         {\hfill\break \textit{Molecular Systems Biology}}
+         {\chref{http://msb.embopress.org/content/12/7/878}{Link}}
+\cventry {2016-01-17}
+         {\textbf{Parallel single–cell bisulfite and rna–sequencing link transcriptional and epigenetic heterogeneity}}
+         {}
+         {\hfill\break \underline{C. Angermueller}, S.  Clark, H.  Lee, M. Teng, T. Hu, F. Krueger, S. Smallwood, C. Ponting, T. Voet, G. Kelsey, O.  Stegle, W. Reik}
          {\hfill\break \textit{Nature Methods}}
-         {}
-\cventry {2014}
+         {\chref{http://www.nature.com/nmeth/journal/v13/n3/full/nmeth.3728.html}{Link}}
+\cventry {2014-11-04}
          {\textbf{Feature Ranking of Type 1 Diabetes Susceptibility Genes Improves Risk Prediction of Type 1 Diabetes}}
          {}
          {\hfill\break C. Winkler, J. Krumsiek, F. Buettner, \underline{C. Angermueller}, E. Giannopoulou, F. Theis, A. Ziegler, E. Bonifacio}
          {\hfill\break \textit{Diabetes}}
+         {\chref{http://www.ncbi.nlm.nih.gov/pubmed/25186292}{Link}}
+\cventry {2014-07-20}
+         {\textbf{Single-cell genome-wide bisulfite sequencing for assessing epigenetic heterogeneity}}
          {}
-\cventry {2013}
+         {\hfill\break S. Smallwood, H. Lee, \underline{C. Angermueller}, F. Krueger, H. Saadeh, J. Peat, S. Andrews, O. Stegle, W. Reik, G. Kelsey}
+         {\hfill\break \textit{Nature Methods}}
+         {\chref{http://www.nature.com/nmeth/journal/v11/n8/full/nmeth.3035.html}{Link}}
+\cventry {2013-07-05}
          {\textbf{Cloud Prediction of Protein Structure and Function with PredictProtein for Debian}}
          {}
          {\hfill\break L. Kaján, G. Yachdav, E. Vicedo, M. Steinegger, M. Mirdita, \underline{C. Angermueller}, A. Boehm, S. Domke, J. Ertl, C. Mertes, E. Reisinger, C. Staniewski, B. Rost}
          {\hfill\break \textit{BioMed Research International}}
-         {}
-\cventry {2012}
+         {\chref{http://www.hindawi.com/journals/bmri/2013/398968/}{Link}}
+\cventry {2012-10-14}
          {\textbf{Discriminative modeling of context-specific amino acid substitution probabilities}}
          {}
          {\hfill\break \underline{C. Angermueller}, A. Biegert, J. Soeding}
          {\hfill\break \textit{Bioinformatics}}
-         {}
-\cventry {2011}
+         {\chref{http://www.ncbi.nlm.nih.gov/pubmed/23080114}{Link}}
+\cventry {2011-04-01}
          {\textbf{The Mre11:Rad50 Structure Shows an ATP-Dependent Molecular Clamp in DNA Double-Strand Break Repair}}
          {}
          {\hfill\break K. Lammens, D.J. Bemeleit, C. Moeckel, E. Clausing, A. Schele, S. Hartung, C. B. Schiller, M. Lucas, \underline{C. Angermueller}, J. Soeding, K. Straesser, K.-P. Hopfner}
          {\hfill\break\textit{Cell}}
-         {}
+         {\chref{http://dx.doi.org/10.1016/j.cell.2011.02.038}{Link}}
+
+\section{Talks}
+\cventry {2016-01-21}
+         {Generative RNNs for sequence modeling}
+         {\hfill\break Engineering Department, University of Cambridge}
+         {Cambridge, UK}
+         {\hfill\break Introduction to recurrent neural networks for sequence generation}
+         {\chref{https://cangermueller.com/wp-content/uploads/2016/01/160121_rnn.pdf}{Slides}}
+\cventry {2015-08-03}
+         {Multi-task Deep Neural Network for predicting DNA methylation}
+         {\hfill\break University of Montreal}
+         {Montreal, Canada}
+         {\hfill\break Deep neural network for jointly predicting DNA methylation of multiple embryonic stem cells from genomic, epigenomic, and physicochemical sequence features}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/08/150803_poster_dlss.pdf}{Poster}}
+\cventry {2015-05-21}
+         {Convolutional Neural Networks}
+         {\hfill\break Engineering Department, University of Cambridge}
+         {Cambridge, UK}
+         {\hfill\break Introduction to convolutional neural networks and recent applications}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/06/150521_cnn.pdf}{Slides},
+          \chref{https://www.youtube.com/watch?v=Hr92S0Sv_zY}{Video}}
+\cventry {2014-11-13}
+         {Automatic Differentiation with Theano}
+         {\hfill\break Engineering Department, University of Cambridge}
+         {Cambridge, UK}
+         {\hfill\break Introduction to the deep learning library Theano with Python}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/01/141113_theano.pdf}{Slides},
+          \chref{https://github.com/cangermueller/python_lecture}{Introduction to Python}}
+\cventry {2013-07-21}
+         {Machine learning for predicting type 1 diabetes from high-throughput data}
+         {\hfill\break Helmholtz Centre, Technical University Munich}
+         {Munich, Germany}
+         {\hfill\break Master's Thesis defense}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/01/130918_t1d.pdf}{Slides}}
+\cventry {2012-12-20}
+         {Context-specific mutation probabilities for sequence searching}
+         {\hfill\break Gene Center, Ludwig Maximilians University}
+         {Munich, Germany}
+         {\hfill\break Conditional random fields for predicting mutation probabilities}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/01/121220_csblast.pdf}{Slides}}
+\cventry {2012-11-14}
+         {Sentiment Knowledge Discovery in Twitter Streaming Data}
+         {\hfill\break Gene Center, Ludwig Maximilians University}
+         {Munich, Germany}
+         {\hfill\break Machine learning methods for sentiment analysis of Twitter data}
+         {\chref{https://cangermueller.com/wp-content/uploads/2015/01/121114_twitter.pdf}{Slides}}
+
+\clearpage
+\newpage
+
+\section{Programming skills}
+\cvitem{Languages}{Python (proficient), C++ (competent), Java, Perl (prior knowledge)}
+\cvitem{Machine learning tools}{Tensorflow (proficient), Theano (proficient), R (proficient)}
+\cvitem{Web development}{HTML, JavaScript (competent), Ruby and Rails (prior knowledge)}
+
+\section{Languages}
+\cvitem {German}
+        {Native proficiency}
+\cvitem {English}
+        {Full professional proficiency}
+\cvitem {French}
+        {Limited working proficiency}
 
 \section{References}
 \hspace*{\hintscolumnwidth}%
@@ -185,17 +355,16 @@ European Bioinformatics Institute\\
 \end{minipage}
 \hfill
 \begin{minipage}[t]{.5\linewidth}
-Dr.\ Johannes~Soeding\\
-Protein Bioinformatics\\
-Gene Center LMU Munich\\
-\emailsymbol\ soeding@genzentrum.lmu.de\\
-\phonesymbol\ +49\,89\,2180\,76742\\
+Zoubin~Ghahramani\\
+Department of Engineering\\
+University of Cambridge\\
+\emailsymbol\ zoubin@eng.cam.ac.uk\\
+\phonesymbol\ +44\,1223\,748\,531\\
 \end{minipage}
 \hfill
 
 \vspace{3cm}
 \parbox{5cm}{\today\\[2ex]
 \hspace*{2mm}\includegraphics[width=3.25cm]{signature_bw.jpg}}
-
 
 \end{document}
